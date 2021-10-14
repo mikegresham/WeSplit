@@ -35,7 +35,7 @@ struct ContentView: View {
     
     var totalPerPerson: Double {
         // Calculate total per person
-        let peopleCount = Double(numberOfPeople) ?? 1 
+        let peopleCount = Double(numberOfPeople) ?? 1
         let amountPerPerson = total / peopleCount
         
         return amountPerPerson
@@ -72,16 +72,19 @@ struct ContentView: View {
                         Text("Subtotal")
                         Spacer()
                         Text("£\(subTotal, specifier: "%.2f")")
+                            .foregroundColor(Color.gray)
                     }
                     HStack {
                         Text("Tip Amount \(tipPercentages[tipPerctange])%")
                         Spacer()
                         Text("£\(tipAmount, specifier: "%.2f")")
+                            .foregroundColor(Color.gray)
                     }
                     HStack {
                         Text("Total")
                         Spacer()
                         Text("£\(total, specifier: "%.2f")")
+                            .foregroundColor(Color.gray)
                     }
                 }
                 
