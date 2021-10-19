@@ -78,7 +78,7 @@ struct ContentView: View {
                         Text("Tip Amount \(tipPercentages[tipPerctange])%")
                         Spacer()
                         Text("£\(tipAmount, specifier: "%.2f")")
-                            .foregroundColor(Color.gray)
+                            .foregroundColor(tipPerctange == 4 ? .red : .gray)
                     }
                     HStack {
                         Text("Total")
